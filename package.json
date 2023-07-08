@@ -1,0 +1,17 @@
+{
+  "name": "gptshare",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "mongodb": "^5.7.0",
+    "mongoose": "^7.3.2",
+    "next-auth": "^4.22.1"
+  }
+}
