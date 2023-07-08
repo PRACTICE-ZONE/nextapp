@@ -2,7 +2,7 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <div>Nav</div>
+    <nav className='flex-between w-full mb-16'>Nav</nav>
   )
 }
 
