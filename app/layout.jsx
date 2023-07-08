@@ -6,7 +6,7 @@ export const metadata = {
     description: "Discover and share AI-generated prompts",
 }
 
-const layout = () => {
+const RootLayout = () => {
   return (
     <html lang='en'>
         <body>
@@ -19,4 +19,4 @@ const layout = () => {
   )
 }
 
-export default layout
+export default RootLayout;
