@@ -3,14 +3,18 @@ import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { signOut } from 'next-auth/react';
-
+import { set } from 'mongoose';
 const Nav = () => {
   const isUserLoggedIn = true;
-  const [provider, setProvider] = useState(null);
+  const [providers, setProviders] = useState(null);
 
   useEffect(() => {
   
-  
+    const setProviders = async () => {
+      const response = await getProviders();
+      setProviders(response);
+    }
+    setProviders();
   }, [])
   
 
