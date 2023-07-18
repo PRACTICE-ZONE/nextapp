@@ -1,5 +1,7 @@
+'use client';
 import Link from 'next/link';
 import Image from 'next/image';
+import { signOut } from 'next-auth/react';
 
 const Nav = () => {
   const isUserLoggedIn = true;
@@ -18,6 +20,13 @@ const Nav = () => {
         { isUserLoggedIn ? (<div className='flex gap-3 md:gap-5'>
           <Link href="/create-prompt" className='black_btn'>
             Create Post
+          </Link>
+          <button className="outline_btn" type='button' onClick={signOut}>Sign out</button>
+          <Link href="/profile">
+            <Image
+             className='rounded_full'
+             src="/assets/images/logo.svg"
+              width={37} height={37} alt="profile" />
           </Link>
         </div>) : ( <></>)}
       </div>
