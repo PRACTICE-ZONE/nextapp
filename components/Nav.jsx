@@ -72,6 +72,18 @@ const Nav = () => {
               width={37} height={37} alt="profile"
               onClick={() => setToggleDropdown((prevState) => !prevState)}
                />
+                {
+                  toggleDropdown && (
+                    <div className='absolute top-10 right-0 bg-white rounded-lg shadow-lg p-3'>
+                      <div className='flex gap-3 flex-col'>
+                        <Link href="/create-prompt" className='black_btn'>
+                          Create Post
+                        </Link>
+                        <button className="outline_btn" type='button' 
+                        onClick={signOut}>Sign out</button>
+                        </div>
+                    </div>)
+                }
             </div>
           ) : (<>
              {
