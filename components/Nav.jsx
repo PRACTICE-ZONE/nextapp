@@ -7,6 +7,7 @@ import { set } from 'mongoose';
 const Nav = () => {
   const isUserLoggedIn = true;
   const [providers, setProviders] = useState(null);
+  const [toggleDropdown, setToggleDropdown] = useState(false);
 
   useEffect(() => {
   
@@ -39,7 +40,9 @@ const Nav = () => {
             <Image
              className='rounded_full'
              src="/assets/images/logo.svg"
-              width={37} height={37} alt="profile" />
+              width={37} height={37} alt="profile"
+              onClick={() => setToggleDropdown(!toggleDropdown)}
+               />
           </Link>
         </div>
         ) : ( 
