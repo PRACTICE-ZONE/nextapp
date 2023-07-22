@@ -87,7 +87,7 @@ const Nav = () => {
                         >
                           Create prompt
                         </Link>
-                        <button className="outline_btn" type='button' 
+                        <button className="mt-5 w-full black_btn" type='button' 
                         onClick={() => {
                           signOut()
                           toggleDropdown(false)
