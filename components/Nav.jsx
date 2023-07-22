@@ -75,7 +75,10 @@ const Nav = () => {
                 {
                   toggleDropdown && (
                     <div className='dropdown'>
-                        <Link href="/create-prompt" className='black_btn'>
+                        <Link href="/profile"
+                        className='dropdown_link'
+                        onClick={() => setToggleDropdown(false)}
+                        >
                           Create Post
                         </Link>
                         <button className="outline_btn" type='button' 
