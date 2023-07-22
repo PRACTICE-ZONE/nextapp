@@ -79,10 +79,20 @@ const Nav = () => {
                         className='dropdown_link'
                         onClick={() => setToggleDropdown(false)}
                         >
-                          Create Post
+                          Profile
+                        </Link>
+                        <Link href="/create-prompt"
+                        className='dropdown_link'
+                        onClick={() => setToggleDropdown(false)}
+                        >
+                          Create prompt
                         </Link>
                         <button className="outline_btn" type='button' 
-                        onClick={signOut}>Sign out</button>
+                        onClick={() => {
+                          signOut()
+                          toggleDropdown(false)
+                          }
+                          }>Sign out</button>
                     </div>)
                 }
             </div>
