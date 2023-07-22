@@ -41,7 +41,22 @@ const Nav = () => {
              src="/assets/images/logo.svg"
               width={37} height={37} alt="profile" />
           </Link>
-        </div>) : ( <></>)}
+        </div>
+        ) : ( 
+        <>
+          {
+            providers && Object.values(providers).map((provider) => (
+              <div key={provider.name}>
+                <button className="black_btn"
+                type='button'
+                onClick={() => signIn(provider.id)}>
+                  Sign in with {provider.name}
+                </button>
+              </div>
+            ))
+          }
+        </>
+        )}
       </div>
     </nav>
   )
