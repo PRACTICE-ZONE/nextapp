@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import { signOut } from 'next-auth/react';
+import { signIn, signOut, getProviders, useSession } from 'next-auth/react';
 import { set } from 'mongoose';
 const Nav = () => {
   const isUserLoggedIn = true;
