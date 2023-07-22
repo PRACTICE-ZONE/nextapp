@@ -1,8 +1,11 @@
+'use client'
 import React from 'react'
 
-const Provider = () => {
+const Provider = ({ children, session }) => {
   return (
-    <div>Provider</div>
+    <SessionProvider session={session}>
+      {children}
+    </SessionProvider>
   )
 }
 
