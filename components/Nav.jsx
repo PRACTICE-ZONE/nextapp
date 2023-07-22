@@ -41,7 +41,6 @@ const Nav = () => {
              className='rounded_full'
              src="/assets/images/logo.svg"
               width={37} height={37} alt="profile"
-              onClick={() => setToggleDropdown(!toggleDropdown)}
                />
           </Link>
         </div>
@@ -69,8 +68,10 @@ const Nav = () => {
             <div className='flex'>
               <Image
              className='rounded_full'
-             src="/assets/images/logo.svg"
-              width={37} height={37} alt="profile" />
+             src="/assets/icons/link.svg"
+              width={37} height={37} alt="profile"
+              onClick={() => setToggleDropdown((prevState) => !prevState)}
+               />
             </div>
           ) : (<>
              {
