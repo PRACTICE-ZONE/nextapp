@@ -22,8 +22,8 @@ const handler = NextAuth({
 
             }
 
-            catch {
-                
+            catch(error) {
+
             }
         }
     }
