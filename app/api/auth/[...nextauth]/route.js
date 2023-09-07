@@ -18,7 +18,13 @@ const handler = NextAuth({
             return true
         },
         async signIn( { profile }) {
-            return true
+            try {
+
+            }
+
+            catch {
+                
+            }
         }
     }
 
