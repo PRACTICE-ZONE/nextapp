@@ -4,9 +4,8 @@ const userSchema = new Schema({
     username: {
         type: String,
         required: true,
-        unique: true,
-        lowercase: true,
-        trim: true
+        unique: [true, 'Username already exists. Please try another one.'],
+
     },
 
     email: {
