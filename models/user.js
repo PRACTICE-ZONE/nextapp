@@ -15,9 +15,10 @@ const userSchema = new Schema({
         match: [/^[a-zA-Z0-9]+$/, 'Email is invalid. Please try another one.'],
     },
 
-
-    Image: {
+    image: {
         type: String,
     },
 }
 );
+
+export default models.User || model('User', userSchema);
