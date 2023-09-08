@@ -20,7 +20,7 @@ const handler = NextAuth({
         },
         async signIn( { profile }) {
             try {
-
+                await connectToDatabase();
             }
 
             catch(error) {
