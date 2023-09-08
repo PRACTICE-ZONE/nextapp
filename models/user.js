@@ -5,13 +5,12 @@ const userSchema = new Schema({
         type: String,
         required: true,
         unique: [true, 'Username already exists. Please try another one.'],
-
     },
 
     email: {
         type: String,
         required: true,
-        unique: true,
+        unique: [true, 'Email already exists. Please try another one.'],
         lowercase: true,
         trim: true
     },
