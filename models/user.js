@@ -17,10 +17,6 @@ const userSchema = new Schema({
         trim: true
     },
 
-    image: {
-
-    },
-
     password: {
         type: String,
         required: true,
