@@ -15,10 +15,6 @@ const userSchema = new Schema({
         match: [/^[a-zA-Z0-9]+$/, 'Email is invalid. Please try another one.'],
     },
 
-    password: {
-        type: String,
-        required: true,
-    },
 
     Image: {
         type: String,
