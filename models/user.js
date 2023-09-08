@@ -5,6 +5,7 @@ const userSchema = new Schema({
         type: String,
         required: [true, 'Username is required.'],
         unique: [true, 'Username already exists. Please try another one.'],
+        match: [/^[a-zA-Z0-9]+$/, 'Username is invalid. Please try another one.'],
     },
 
     email: {
