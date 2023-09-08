@@ -17,6 +17,8 @@ const handler = NextAuth({
     // https://next-auth.js.org/configuration/callbacks
     callbacks: {
         async session({session}) {
+            const sessionUser = await User.findOne({ email: session.user.email });
+            session.user.id = sessionUser._id;
             return true
         },
         async signIn( { profile }) {
